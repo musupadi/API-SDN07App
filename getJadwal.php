@@ -4,7 +4,7 @@
 	$id_kelas = $_POST['id_kelas'];
 	$hari = $_POST['hari'];
 
-	$query = "SELECT a.nip,b.nama,d.nama_kelas,c.nama_mapel,a.hari,a.dari_jam,a.sampai_jam FROM jadwal a JOIN guru b ON a.nip=b.nip JOIN mata_pelajaran c ON a.id_mapel=c.id_mapel JOIN kelas d ON a.id_kelas=d.id_kelas WHERE d.id_kelas = '$id_kelas' AND a.hari = '$hari'";
+	$query = "SELECT a.id_jadwal,a.nip,b.nama,d.nama_kelas,c.nama_mapel,a.hari,a.dari_jam,a.sampai_jam FROM jadwal a JOIN guru b ON a.nip=b.nip JOIN mata_pelajaran c ON a.id_mapel=c.id_mapel JOIN kelas d ON a.id_kelas=d.id_kelas WHERE d.id_kelas = '$id_kelas' AND a.hari = '$hari'";
 
 	$result = mysqli_query($conn,$query);
 

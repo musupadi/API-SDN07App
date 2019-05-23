@@ -1,7 +1,7 @@
 <?php 
 	require_once 'Connection.php';
 
-	$query = "SELECT a.nip,b.nama,d.nama_kelas,c.nama_mapel,a.hari,a.dari_jam,a.sampai_jam FROM jadwal a JOIN guru b ON a.nip=b.nip JOIN mata_pelajaran c ON a.id_mapel=c.id_mapel JOIN kelas d ON a.id_kelas=d.id_kelas";
+	$query = "SELECT a.id_jadwal,a.nip,b.nama,d.nama_kelas,c.nama_mapel,a.hari,a.dari_jam,a.sampai_jam FROM jadwal a JOIN guru b ON a.nip=b.nip JOIN mata_pelajaran c ON a.id_mapel=c.id_mapel JOIN kelas d ON a.id_kelas=d.id_kelas";
 
 	$result = mysqli_query($conn,$query);
 
