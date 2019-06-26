@@ -1,8 +1,6 @@
 <?php 
 	require_once 'Connection.php';
-
 	$nama_mapel = $_POST['nama_mapel'];
-
 	$query = "SELECT * FROM mata_pelajaran a WHERE nama_mapel = '$nama_mapel'";
 
 	$result = mysqli_query($conn,$query);
